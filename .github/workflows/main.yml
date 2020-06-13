@@ -21,12 +21,13 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - name: Install and Build
+    - name: Install
         run: npm install
+    - name: Build
         run: npm run buildGhPages
-      - name: Deploy
+    - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_TOKEN: ${{secrets.JSON_BEAUTIFY_DEPLOY}}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: dist # The folder the action should deploy.
+            GITHUB_TOKEN: ${{secrets.JSON_BEAUTIFY_DEPLOY}}
+            BRANCH: gh-pages # The branch the action should deploy to.
+            FOLDER: dist # The folder the action should deploy.
