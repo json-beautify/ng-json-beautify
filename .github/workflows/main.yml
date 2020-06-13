@@ -13,13 +13,13 @@ jobs:
           uses: actions/checkout@v2
           with:
             persist-credentials: false
-        - name: Install
-            run: npm install
-        - name: Build
-            run: npm run buildGhPages
+        - name: Install and build
+          run: |
+            npm install
+            npm run buildGhPages
         - name: Deploy
-            uses: JamesIves/github-pages-deploy-action@releases/v3
-            with:
-                GITHUB_TOKEN: ${{secrets.JSON_BEAUTIFY_DEPLOY}}
-                BRANCH: gh-pages # The branch the action should deploy to.
-                FOLDER: dist # The folder the action should deploy.
+          uses: JamesIves/github-pages-deploy-action@releases/v3
+          with:
+            GITHUB_TOKEN: ${{secrets.JSON_BEAUTIFY_DEPLOY}}
+            BRANCH: gh-pages # The branch the action should deploy to.
+            FOLDER: dist # The folder the action should deploy.
