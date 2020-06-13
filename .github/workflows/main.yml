@@ -22,4 +22,4 @@ jobs:
           with:
             GITHUB_TOKEN: ${{secrets.JSON_BEAUTIFY_DEPLOY}}
             BRANCH: gh-pages # The branch the action should deploy to.
-            FOLDER: dist # The folder the action should deploy.
+            FOLDER: dist/ng-json-beautify # The folder the action should deploy.
