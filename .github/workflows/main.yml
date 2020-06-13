@@ -24,4 +24,4 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Deploy
-      run: ng deploy
+      run: npm run deploy
