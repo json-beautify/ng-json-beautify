@@ -5,6 +5,7 @@
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build",
+        "buildGhPages": "ng build --base-href https://json-beautify.github.io/ng-json-beautify/",
         "deploy": "ng deploy",
         "test": "ng test",
         "lint": "ng lint",
